@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Password generator app</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="body">
+    <section class="section-generator">
+      <div class="container">
+        <div class="title">
+          <h1 class="app-name">Password Generator</h1>
+        </div>
+        <div class="password">
+          <textarea class="text-password" id="text-password" readonly>
+PTx1f5DaFX</textarea
+          >
+          <div class="copied">
+            <span class="text-copied"></span>
+            <button class="btn-copy" type="button">
+              <svg class="icon-copy" width="21" height="24">
+                <use
+                  href="./assets/images/icons/symbol-defs.svg#icon-copy"
+                ></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <form class="generator-form">
+          <div class="range selected-length">
+            <span class="number-length">0</span>
+          </div>
+          <label class="hidden" for="character-length">Character Length</label>
+          <input
+            class="input-length"
+            type="range"
+            name="character-length"
+            id="character-length"
+            value="0"
+            min="0"
+            max="20"
+            step="1"
+          />
+
+          <div class="checkboxes">
+            <div class="checkbox">
+              <label for="uppercase">Include Uppercase Letters</label>
+              <input
+                class="input-check"
+                id="uppercaseCb"
+                type="checkbox"
+                name="options"
+                value="uppercase"
+              />
+            </div>
+            <div class="checkbox">
+              <label for="lowercase">Include Lowercase Letters</label>
+              <input
+                class="input-check"
+                id="lowercaseCb"
+                type="checkbox"
+                name="options"
+                value="lowercase"
+              />
+            </div>
+            <div class="checkbox">
+              <label for="numbers">Include Numbers</label>
+              <input
+                class="input-check"
+                id="digitsCb"
+                type="checkbox"
+                name="options"
+                value="numbers"
+              />
+            </div>
+            <div class="checkbox">
+              <label for="symbols">Include Symbols</label>
+              <input
+                class="input-check"
+                id="specialsCb"
+                type="checkbox"
+                name="options"
+                value="symbols"
+              />
+            </div>
+          </div>
+
+          <button class="btn-generate" type="submit">GENERATE</button>
+        </form>
+      </div>
+    </section>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
